@@ -1,0 +1,8 @@
+from canard import can
+from canard.hw import cantact
+
+dev = cantact.CantactDev("/dev/cu.usbmodem14511")
+
+dev.start()
+while True:
+      print(dev.recv())
